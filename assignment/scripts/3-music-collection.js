@@ -23,6 +23,9 @@ console.log(collection);
 
 function showCollection(arr) {
     console.log(`Contains ${arr.length} albums.`);
+    for (const album of arr) {
+        console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
+    }
 }
 
 showCollection(collection);
