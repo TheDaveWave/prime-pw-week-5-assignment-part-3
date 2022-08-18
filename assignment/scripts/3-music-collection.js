@@ -31,5 +31,6 @@ function showCollection(arr) {
 showCollection(collection);
 
 function findByArtist(artist) {
+    let result = [];
     
 }
