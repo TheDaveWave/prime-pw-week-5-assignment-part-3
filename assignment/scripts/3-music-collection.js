@@ -22,5 +22,7 @@ addToCollection('Hits Back (Deluxe Edition)', 'The Clash',1979);
 console.log(collection);
 
 function showCollection(arr) {
-
+    console.log(`Contains ${arr.length} albums.`);
 }
+
+showCollection(collection);
