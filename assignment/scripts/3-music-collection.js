@@ -8,6 +8,7 @@ function addToCollection(title, artist, yearPublished) {
     album.artist = artist;
     album.yearPublished = yearPublished;
     collection.push(album);
+    console.log('New albumb added:',album);
     return album;
 }
 
