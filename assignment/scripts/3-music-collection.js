@@ -40,6 +40,6 @@ function findByArtist(artist) {
     return result;
 }
 
-console.log(findByArtist('Casiopea'));
-console.log(findByArtist('Tame Impala'));
-console.log(findByArtist('Rush'));
+console.log('findByArtist should return CASIOPEA',findByArtist('Casiopea'));
+console.log('findByArtist should return Lonerism and InnerSpeaker',findByArtist('Tame Impala'));
+console.log('findByArtist should return []',findByArtist('Rush'));
