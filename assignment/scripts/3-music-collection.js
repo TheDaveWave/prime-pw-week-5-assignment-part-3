@@ -10,3 +10,10 @@ function addToCollection(title, artist, yearPublished) {
     collection.push(album);
     return album;
 }
+
+addToCollection('Making a Door Less Open', 'Car Seat Headrest', 2020);
+addToCollection('In The Court of The Crimson King', 'King Crimson', 1969);
+addToCollection('CASIOPEA','Casiopea',1979);
+addToCollection('Lonerism','Tame Impala',2012);
+addToCollection('InnerSpeaker','Tame Impala',2011);
+addToCollection('Hits Back (Deluxe Edition)', 'The Clash',1979);
