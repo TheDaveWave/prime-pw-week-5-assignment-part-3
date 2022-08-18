@@ -44,6 +44,6 @@ console.log('findByArtist should return CASIOPEA',findByArtist('Casiopea'));
 console.log('findByArtist should return Lonerism and InnerSpeaker',findByArtist('Tame Impala'));
 console.log('findByArtist should return []',findByArtist('Rush'));
 
-function search() {
+function search(searchObject) {
     
 }
