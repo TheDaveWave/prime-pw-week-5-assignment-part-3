@@ -34,8 +34,12 @@ function findByArtist(artist) {
     let result = [];
     for (const album of collection) {
         if(album.artist === artist) {
-            result.push(album);
+            result.push(album.title);
         }
     }
     return result;
 }
+
+console.log(findByArtist('Casiopea'));
+console.log(findByArtist('Tame Impala'));
+console.log(findByArtist('Rush'));
