@@ -29,3 +29,7 @@ function showCollection(arr) {
 }
 
 showCollection(collection);
+
+function findByArtist() {
+    
+}
