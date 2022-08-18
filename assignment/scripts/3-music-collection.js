@@ -18,3 +18,5 @@ addToCollection('CASIOPEA','Casiopea',1979);
 addToCollection('Lonerism','Tame Impala',2012);
 addToCollection('InnerSpeaker','Tame Impala',2011);
 addToCollection('Hits Back (Deluxe Edition)', 'The Clash',1979);
+
+console.log(collection);
