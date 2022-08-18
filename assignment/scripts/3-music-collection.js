@@ -30,6 +30,6 @@ function showCollection(arr) {
 
 showCollection(collection);
 
-function findByArtist() {
+function findByArtist(artist) {
     
 }
