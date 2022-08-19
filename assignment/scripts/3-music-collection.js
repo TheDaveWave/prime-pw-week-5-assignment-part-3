@@ -47,6 +47,15 @@ console.log('findByArtist should return []',findByArtist('Rush'));
 
 let searchCriteria = { artist: 'Tame Impala', year: 2011 };
 
+
+function search(searchObject) {
+    for (const key in object) {
+        if (Object.hasOwnProperty.call(object, key)) {
+            const element = object[key];
+            
+        }
+    }
+}
 // function search(searchObject) {
 //     let match = [];
 //     let searchObjProps = Object.getOwnPropertyNames(searchObject).sort();
@@ -67,19 +76,19 @@ let searchCriteria = { artist: 'Tame Impala', year: 2011 };
 //     }
 // }
 
-function search(searchObject) {
-    let match = [];
-    let searchObjProps = Object.getOwnPropertyNames(searchObject).sort();
-    let searchObjVals = Object.values(searchObject).sort();
-    // let collProps = Object.getOwnPropertyNames(collection).sort();
-    // let collVals = Object.values(collection).sort();
-    //loop through searchObject properties and see if they are the same as collection properites.
-    for(i = 0; i < searchObjProps.length; i++) {
-        for(j = 0; j < collection[i].length; j++) {
-            console.log(true);
-        }
-    }
-}
+// function search(searchObject) {
+//     let match = [];
+//     let searchObjProps = Object.getOwnPropertyNames(searchObject).sort();
+//     let searchObjVals = Object.values(searchObject).sort();
+//     // let collProps = Object.getOwnPropertyNames(collection).sort();
+//     // let collVals = Object.values(collection).sort();
+//     //loop through searchObject properties and see if they are the same as collection properites.
+//     for(i = 0; i < searchObjProps.length; i++) {
+//         for(j = 0; j < collection[i].length; j++) {
+//             console.log(true);
+//         }
+//     }
+// }
 
 
 // console.log(Object.getOwnPropertyNames(collection[0]));
