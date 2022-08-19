@@ -52,13 +52,25 @@ function search(searchObject) {
     for (const key in searchObject) {
         if (Object.hasOwnProperty.call(searchObject, key)) {
             console.log(key);
-            const element = searchObject[key];
-            console.log(element);
+            const element1 = searchObject[key];
+            console.log(element1);
+            for (const iterator of collection) {
+                // console.log(iterator);
+                for (const item in iterator) {
+                    if (Object.hasOwnProperty.call(iterator, item)) {
+                        console.log(item);
+                        const element2 = iterator[item];
+                        console.log(element2);
+                    }
+                }
+            }
         }
+            
     }
 }
 
 search(searchCriteria);
+// search(collection);
 
 // function search(searchObject) {
 //     let match = [];
