@@ -45,39 +45,80 @@ console.log('findByArtist should return CASIOPEA',findByArtist('Casiopea'));
 console.log('findByArtist should return Lonerism and InnerSpeaker',findByArtist('Tame Impala'));
 console.log('findByArtist should return []',findByArtist('Rush'));
 
-let searchCriteria = { artist: 'Tame Impala', yearPublished: 2011 };
-
+let searchCriteria = { artist: 'Car Seat Headrest', yearPublished: 2020 };
 
 function search(searchObject) {
-    let match = [];
-    for (const key in searchObject) {
-        if (Object.hasOwnProperty.call(searchObject, key)) {
-            const element1 = searchObject[key];
-            // console.log(key);
-            // console.log(element1);
-            for (const iterator of collection) {
-                // console.log(iterator);
-                for (const prop in iterator) {
-                    if (Object.hasOwnProperty.call(iterator, prop)) {
-                        const element2 = iterator[prop];
-                        // console.log(key);
-                        // console.log(item);
-                        console.log(element1);
-                        console.log(element2);
-                        if(key === prop & element1 === element2) {
-                            console.log(true);
-                        } else {
-                            console.log(false);
+    let array = [];
+    let count = 0;
+    if(searchObject === undefined) {
+        console.log(collection);
+        return collection;
+    } else {
+        let values = Object.values(searchObject);
+        for(const object of collection) {
+            for (const key in object) {
+                if (Object.hasOwnProperty.call(object, key)) {
+                    const element1 = object[key];
+                    for (const prop in searchObject) {
+                        if (Object.hasOwnProperty.call(searchObject, prop)) {
+                            const element2 = searchObject[prop];
+                            if(prop === key && element2 === element1) {
+                                count++;
+                                if (count === values.filter(test = () => {return values;},element1).length) {
+                                    array.push(object);
+                                } else {
+                                    continue;
+                                }
+                            }
                         }
                     }
                 }
             }
-        }
-            
+        } 
     }
+    console.log(array);  
+    return array;
 }
 
 search(searchCriteria);
+search();
+searchCriteria = { artist: 'Tame Impala', yearPublished: 2012 };
+search(searchCriteria);
+searchCriteria = { artist: 'Ray Charles', year: 1957 };
+search(searchCriteria);
+
+// function search(searchObject) {
+//     let match = [];
+//     for (const key in searchObject) {
+//         if (Object.hasOwnProperty.call(searchObject, key)) {
+//             const element1 = searchObject[key];
+//             // console.log(key);
+//             // console.log(element1);
+//             for (const iterator of collection) {
+//                 // console.log(iterator);
+//                 for (const prop in iterator) {
+//                     if (Object.hasOwnProperty.call(iterator, prop)) {
+//                         const element2 = iterator[prop];
+//                         // console.log(key);
+//                         // console.log(item);
+//                         console.log(element1);
+//                         console.log(element2);
+//                         // Causes more than one entry due to only checking one prop at time.
+//                         if(key === prop && element1 === element2) {
+//                             console.log(true);
+//                             match.push(iterator);
+//                         } else {
+//                             console.log(false);
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+            
+//     }
+//     console.log(match);
+// }
+
 // search(collection);
 
 // function search(searchObject) {
