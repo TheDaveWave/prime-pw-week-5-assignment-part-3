@@ -45,22 +45,30 @@ console.log('findByArtist should return CASIOPEA',findByArtist('Casiopea'));
 console.log('findByArtist should return Lonerism and InnerSpeaker',findByArtist('Tame Impala'));
 console.log('findByArtist should return []',findByArtist('Rush'));
 
-let searchCriteria = { artist: 'Tame Impala', year: 2011 };
+let searchCriteria = { artist: 'Tame Impala', yearPublished: 2011 };
 
 
 function search(searchObject) {
+    let match = [];
     for (const key in searchObject) {
         if (Object.hasOwnProperty.call(searchObject, key)) {
-            console.log(key);
             const element1 = searchObject[key];
-            console.log(element1);
+            // console.log(key);
+            // console.log(element1);
             for (const iterator of collection) {
                 // console.log(iterator);
-                for (const item in iterator) {
-                    if (Object.hasOwnProperty.call(iterator, item)) {
-                        console.log(item);
-                        const element2 = iterator[item];
+                for (const prop in iterator) {
+                    if (Object.hasOwnProperty.call(iterator, prop)) {
+                        const element2 = iterator[prop];
+                        // console.log(key);
+                        // console.log(item);
+                        console.log(element1);
                         console.log(element2);
+                        if(key === prop & element1 === element2) {
+                            console.log(true);
+                        } else {
+                            console.log(false);
+                        }
                     }
                 }
             }
