@@ -87,6 +87,9 @@ function search(searchObject) {
 // console.log(Object.values(searchCriteria));
 // console.log(Object.values(collection)[0]);
 
-console.log(collection[0].length);
+// console.log(collection[0].length);
 // console.log(collection)
-search(searchCriteria);
+// search(searchCriteria);
+
+console.log(collection[1]);
+console.log(collection[1].title);
