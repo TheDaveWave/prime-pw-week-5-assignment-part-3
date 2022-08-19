@@ -49,13 +49,17 @@ let searchCriteria = { artist: 'Tame Impala', year: 2011 };
 
 
 function search(searchObject) {
-    for (const key in object) {
-        if (Object.hasOwnProperty.call(object, key)) {
-            const element = object[key];
-            
+    for (const key in searchObject) {
+        if (Object.hasOwnProperty.call(searchObject, key)) {
+            console.log(key);
+            const element = searchObject[key];
+            console.log(element);
         }
     }
 }
+
+search(searchCriteria);
+
 // function search(searchObject) {
 //     let match = [];
 //     let searchObjProps = Object.getOwnPropertyNames(searchObject).sort();
@@ -100,5 +104,5 @@ function search(searchObject) {
 // console.log(collection)
 // search(searchCriteria);
 
-console.log(collection[1]);
-console.log(collection[1].title);
+// console.log(collection[1]);
+// console.log(collection[1].title);
