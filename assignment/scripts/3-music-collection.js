@@ -30,8 +30,8 @@ function showCollection(arr) {
     console.log(`Contains ${arr.length} albums.`);
     for (const album of arr) {
         console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}:`);
-        for (let track of album.tracks) {
-            console.log(`${track}\n`);
+        for (let i = 0; i < album.tracks.length; i++) {
+            console.log(`${i + 1}. ${album.tracks[i]}\n`);
         }
     }
 }
