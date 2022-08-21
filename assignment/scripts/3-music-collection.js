@@ -71,7 +71,10 @@ function search(searchObject) {
                             const element2 = searchObject[prop];
                             if(prop === key && element2 === element1) {
                                 count++;
-                                if (count === values.filter(test = () => {return values;},element1).length) {
+                                if(Array.isArray(element1) && element1.includes(element2,0)){
+                                    array.push(object);
+                                }
+                                else if (count === values.filter(test = () => {return values;},element1).length) {
                                     array.push(object);
                                 } else {
                                     continue;
@@ -92,6 +95,9 @@ search();
 searchCriteria = { artist: 'Tame Impala', yearPublished: 2012 };
 search(searchCriteria);
 searchCriteria = { artist: 'Ray Charles', year: 1957 };
+search(searchCriteria);
+console.log('Test for Tracks');
+searchCriteria = {artist: 'Tame Impala', track: 'Endors Toi: 3:07'}
 search(searchCriteria);
 
 // function search(searchObject) {
@@ -174,3 +180,37 @@ search(searchCriteria);
 
 // console.log(collection[1]);
 // console.log(collection[1].title);
+
+
+// function search(searchObject) {
+//     let array = [];
+//     let count = 0;
+//     if(searchObject === undefined) {
+//         console.log(collection);
+//         return collection;
+//     } else {
+//         let values = Object.values(searchObject);
+//         for(const object of collection) {
+//             for (const key in object) {
+//                 if (Object.hasOwnProperty.call(object, key)) {
+//                     const element1 = object[key];
+//                     for (const prop in searchObject) {
+//                         if (Object.hasOwnProperty.call(searchObject, prop)) {
+//                             const element2 = searchObject[prop];
+//                             if(prop === key && element2 === element1) {
+//                                 count++;
+//                                 if (count === values.filter(test = () => {return values;},element1).length) {
+//                                     array.push(object);
+//                                 } else {
+//                                     continue;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         } 
+//     }
+//     console.log(array);  
+//     return array;
+// }
