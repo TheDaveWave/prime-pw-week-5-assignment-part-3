@@ -14,12 +14,15 @@ function addToCollection(title, artist, yearPublished, tracks) {
     return album;
 }
 
-addToCollection('Making a Door Less Open', 'Car Seat Headrest', 2020);
-addToCollection('In The Court of The Crimson King', 'King Crimson', 1969);
-addToCollection('CASIOPEA','Casiopea',1979);
-addToCollection('Lonerism','Tame Impala',2012);
-addToCollection('InnerSpeaker','Tame Impala',2011);
-addToCollection('Hits Back (Deluxe Edition)', 'The Clash',1979);
+
+//just going to add two songs of each album
+
+addToCollection('Making a Door Less Open', 'Car Seat Headrest', 2020, ["Weightlifters: 5:40", "Can't Cool Me Down: 5:09"]);
+addToCollection('In The Court of The Crimson King', 'King Crimson', 1969, ["21st Century Schizoid Man: 7:23", "I Talk to the Wind: 6:05"]);
+addToCollection('CASIOPEA','Casiopea',1979, ["Time Limit: 3:07", "Tears Of The Star: 4:30"]);
+addToCollection('Lonerism','Tame Impala',2012, ["Be Above It: 3:22","Endors Toi: 3:07"]);
+addToCollection('InnerSpeaker','Tame Impala',2011, ["It Is Not Meant to Be: 5:22", "Desire Be Desire Go: 4:26"]);
+addToCollection('Hits Back (Deluxe Edition)', 'The Clash',1979, ["I Fought the Law: 2:43","Clampdown: 3:49"]);
 
 console.log(collection);
 
